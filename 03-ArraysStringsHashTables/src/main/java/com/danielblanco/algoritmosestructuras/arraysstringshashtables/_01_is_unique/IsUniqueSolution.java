@@ -12,12 +12,12 @@ import java.util.Set;
 public class IsUniqueSolution {
 
   // Asumiendo que es ASCII. Dependiendo de la codificación serán más
-  private static int NUMBER_OF_CHARS = 128;
+  private static final int NUMBER_OF_CHARS = 128;
 
   public boolean isUnique(String s) {
     if (s.length() > NUMBER_OF_CHARS) return false;
 
-    Set<Character> set = new HashSet<Character>();
+    Set<Character> set = new HashSet<>();
     for (char c : s.toCharArray()) {
       if (set.contains(c)) return false;
       set.add(c);
